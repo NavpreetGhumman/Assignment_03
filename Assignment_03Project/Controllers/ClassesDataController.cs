@@ -99,12 +99,19 @@ namespace Assignment_03Project.Controllers
             {
                 //Access Column information by the DB column name as an index
 
+                int ClassId = (int)ResultSet["classid"];
                 string ClassCode = ResultSet["classcode"].ToString();
+                long TeacherId = (long)ResultSet["teacherid"];
+                DateTime StartDate = (DateTime)ResultSet["startdate"];
+                DateTime FinishDate = (DateTime)ResultSet["finishdate"];
                 string ClassName = ResultSet["classname"].ToString();
 
+                Subject.classid = ClassId;
                 Subject.classcode = ClassCode;
+                Subject.teacherid = TeacherId;
+                Subject.startdate = StartDate;
+                Subject.finishdate = FinishDate;
                 Subject.classname = ClassName;
-
             }
             return Subject;
         }

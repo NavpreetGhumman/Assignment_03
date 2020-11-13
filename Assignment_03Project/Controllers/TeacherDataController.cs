@@ -112,19 +112,13 @@ namespace Assignment_03Project.Controllers
                 NewTeacher.teacherfname = TeacherFname;
                 NewTeacher.teacherlname = TeacherLname;
                 NewTeacher.employeenumber = EmployeeNumber;
-                NewTeacher.hiredate = HireDate;
+                NewTeacher.hiredate = HireDate:
                 NewTeacher.salary = salary;
             }
             return NewTeacher;
         }
-
-
-            
-
-
-        
     }
-    }
+}
 
         
 
