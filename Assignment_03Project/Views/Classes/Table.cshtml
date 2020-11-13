@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Assignment_03Project.Models.Classes>
+
+    @{
+        ViewBag.Title = "Table";
+    }
+
+    <h1>Table view of Classes</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Class Id</th>
+                <th>Start Date</th>
+                <th>Finish Date</th>
+                <th>Class Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var subject in Model)
+            {
+                <tr>
+                    <td>@subject.classid</td>
+                    <td>@subject.startdate</td>
+                    <td>@subject.finishdate</td>
+                    <td>@subject.classcode<a href="/Classes/Show/@subject.classid">(Click here)</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p><strong>Note:</strong>Click on the <em>click here</em> button to view more information about class.</p>
+
